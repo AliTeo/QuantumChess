@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Chessground Demo</title>
+
+        <link rel="stylesheet" type="text/css" href="../chessground/assets/chessground.base.css" />
+        <link rel="stylesheet" type="text/css" href="../chessground/assets/chessground.brown.css" />
+        <link rel="stylesheet" type="text/css" href="../chessground/assets/chessground.cburnett.css" />
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .chessground {
+                width: 500px;
+                height: 500px;
+            }
+
+            cg-board {
+                background-color: #bfcfdd;
+            }
+        </style>
+
+        <script src="main.js" type="module"></script>
+    </head>
+    <body>
+        <div>
+            <div class="chessground" id="board-1"></div>
+        </div>
+    </body>
+</html>
