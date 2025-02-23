@@ -1,6 +1,3 @@
 [submodule "chessground"]
 	path = chessground
 	url = https://github.com/lichess-org/chessground.git
-[submodule "chess.js"]
-    path = path/to/chess.js
-    url = https://github.com/jhlywa/chess.js.git
