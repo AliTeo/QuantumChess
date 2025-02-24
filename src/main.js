@@ -1,6 +1,8 @@
 import { Chess } from '../chess.js/dist/esm/chess.js';
 import { Chessground } from '../chessground/dist/chessground.js';
 
+let switchTurnFlag = false;
+
 // Initialize Chess.js
 const game = new Chess();
 
@@ -15,12 +17,13 @@ const board = Chessground(document.getElementById('board-1'), {
 board.set({ fen: game.fen() });
 
 function handleMove(orig, dest, capturedPiece) {
-  const move = game.move({ from: orig, to: dest });
+  const move = game.move({ from: orig, to: dest }, { switchTurn: switchTurnFlag });
   if (move) {
     console.log(`Moved ${move.piece} from ${orig} to ${dest}`);
     const piece = game.get(dest);
     if (piece) {
       console.log(`Piece ID: ${piece.id}`);
+      console.log(`Piece probability: ${piece.probability}`);
     } else {
       console.log(`Piece at ${dest} not found`);
     }
